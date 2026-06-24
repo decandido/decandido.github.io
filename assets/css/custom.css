@@ -1,0 +1,100 @@
+/* ---- Stat chips ---- */
+.stats-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75em;
+  margin: 0 0 1.5em 0;
+}
+.stat {
+  background: #f0fbf7;
+  border: 1px solid #4acaa8;
+  border-radius: 2em;
+  padding: 0.35em 1em;
+  font-size: 0.85em;
+  color: #555;
+}
+.stat strong {
+  color: #4acaa8;
+}
+
+/* ---- Education timeline ---- */
+ul.timeline {
+  list-style: none;
+  padding-left: 1.5em;
+  border-left: 3px solid #4acaa8;
+  margin-left: 0.5em;
+}
+ul.timeline li {
+  position: relative;
+  padding: 0 0 1.25em 1.25em;
+}
+ul.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -0.6em;
+  top: 0.45em;
+  width: 0.75em;
+  height: 0.75em;
+  background: #4acaa8;
+  border-radius: 50%;
+}
+ul.timeline li:last-child {
+  padding-bottom: 0;
+}
+
+/* ---- Section heading left accent ---- */
+#main h3 {
+  padding-left: 0.6em;
+  border-left: 4px solid #4acaa8;
+  margin-bottom: 0.75em;
+}
+
+/* ---- Research card hover lift ---- */
+.features article {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 4px;
+  padding: 1.5em 1em;
+}
+.features article:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(74, 202, 168, 0.15);
+}
+
+/* ---- Avatar ring ---- */
+#header .image.avatar img {
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.2);
+}
+
+/* ---- Alternating section backgrounds ---- */
+#education,
+#contact {
+  background: #fafafa;
+}
+
+/* ---- Banner hero height + gradient overlay ---- */
+.image.main {
+  position: relative;
+  height: 26em;
+}
+.image.main::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.25));
+  pointer-events: none;
+}
+@media (max-width: 736px) {
+  .image.main { height: 14em; }
+}
+
+/* ---- Link hover underline animation ---- */
+#main a:not(.button):not([class*="icon"]) {
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+#main a:not(.button):not([class*="icon"]):hover {
+  border-bottom-color: #4acaa8;
+  color: #4acaa8;
+}
