@@ -1,3 +1,8 @@
+/* ---- Collapse gap between intro sentence and its list ---- */
+p + ul {
+  margin-top: 0;
+}
+
 /* ---- Stat chips ---- */
 .stats-bar {
   display: flex;
