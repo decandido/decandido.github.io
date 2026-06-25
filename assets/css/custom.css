@@ -1,6 +1,13 @@
 /* ---- Collapse gap between intro sentence and its list ---- */
-p + ul {
+p + ul,
+h3 + ul,
+h4 + ul {
   margin-top: 0;
+}
+p:has(+ ul),
+h3:has(+ ul),
+h4:has(+ ul) {
+  margin-bottom: 0;
 }
 
 /* ---- Stat chips ---- */
