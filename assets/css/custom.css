@@ -21,6 +21,20 @@ p + ul {
 .stat strong {
   color: #4acaa8;
 }
+.stat--book {
+  background: #4acaa8;
+  color: #fff;
+  border-color: #4acaa8;
+  text-decoration: none;
+}
+.stat--book strong {
+  color: #fff;
+}
+.stat--book:hover {
+  background: #3ab899;
+  border-color: #3ab899;
+  color: #fff;
+}
 
 /* ---- Education timeline ---- */
 ul.timeline {
@@ -93,10 +107,10 @@ ul.timeline li:last-child {
   .image.main { height: 14em; }
 }
 
-/* ---- Link hover underline animation ---- */
+/* ---- Links always underlined, teal on hover ---- */
 #main a:not(.button):not([class*="icon"]) {
   text-decoration: none;
-  border-bottom: 1px solid transparent;
+  border-bottom: 1px solid rgba(136, 136, 136, 0.4);
   transition: border-color 0.2s ease, color 0.2s ease;
 }
 #main a:not(.button):not([class*="icon"]):hover {
