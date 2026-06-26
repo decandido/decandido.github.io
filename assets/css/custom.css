@@ -94,6 +94,7 @@ ul.timeline li:last-child {
 
 /* ---- Alternating section backgrounds ---- */
 #education,
+#research,
 #contact {
   background: #fafafa;
 }
