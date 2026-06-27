@@ -93,8 +93,8 @@ ul.timeline li:last-child {
 }
 
 /* ---- Alternating section backgrounds ---- */
-#education,
-#research,
+#leadership,
+#teaching,
 #contact {
   background: #fafafa;
 }
