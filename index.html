@@ -186,7 +186,7 @@
 							<section id="contact">
 								<div class="container">
 									<h3>Contact</h3>
-									<p>I'm always happy to talk about AI safety, autonomous driving, or research more broadly. The best way to reach me is via <a href="https://www.linkedin.com/in/decandido">LinkedIn</a>.</p>
+									<p>I'm always happy to talk about AI safety, autonomous driving, or research more broadly. The best way to reach me is via <a href="https://www.linkedin.com/in/decandido">LinkedIn</a> &mdash; or if you&rsquo;d prefer, <a id="cal-link" rel="nofollow noopener noreferrer">schedule a call</a>.</p>
 								</div>
 							</section>
 
@@ -211,6 +211,29 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+		<script>
+		(function () {
+			var seen = false;
+			function reveal() {
+				if (seen) return;
+				seen = true;
+				var el = document.getElementById('cal-link');
+				if (!el) return;
+				el.href = ['https://', 'cal', '.eu/', 'decandido', '/chat'].join('');
+				el.style.opacity = '1';
+				el.style.pointerEvents = 'auto';
+			}
+			var section = document.getElementById('contact');
+			if (section && 'IntersectionObserver' in window) {
+				var obs = new IntersectionObserver(function (e) {
+					if (e[0].isIntersecting) { reveal(); obs.disconnect(); }
+				}, { threshold: 0.3 });
+				obs.observe(section);
+			} else {
+				setTimeout(reveal, 3000);
+			}
+		}());
+		</script>
 
 	</body>
 </html>

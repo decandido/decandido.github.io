@@ -115,6 +115,14 @@ ul.timeline li:last-child {
   .image.main { height: 14em; }
 }
 
+/* ---- booking link (revealed by JS on scroll) ---- */
+#cal-link {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
 /* ---- Links always underlined, teal on hover ---- */
 #main a:not(.button):not([class*="icon"]) {
   text-decoration: none;
